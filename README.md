@@ -61,7 +61,7 @@ To jump into this project, you’ll need:
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/traffic-light-controller.git
+    git clone https://github.com/owen-tariq/traffic-light-controller.git
     ```
 2. Fire up Quartus Prime:
     - Open the `Project_FreqDiv.qpf` file to start exploring the project.
