@@ -1,0 +1,34 @@
+# do Project_FreqDiv.do
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:11:48 on Aug 08,2024
+# vlog -work work Project_FreqDiv.vo 
+# -- Compiling module MyProject_TrafficLight
+# 
+# Top level modules:
+# 	MyProject_TrafficLight
+# End time: 12:11:48 on Aug 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:11:48 on Aug 08,2024
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module MyProject_TrafficLight_vlg_sample_tst
+# -- Compiling module MyProject_TrafficLight_vlg_check_tst
+# -- Compiling module MyProject_TrafficLight_vlg_vec_tst
+# 
+# Top level modules:
+# 	MyProject_TrafficLight_vlg_vec_tst
+# End time: 12:11:48 on Aug 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "Project_FreqDiv.do" 
+# Start time: 12:11:49 on Aug 08,2024
+# Loading work.MyProject_TrafficLight_vlg_vec_tst
+# Loading work.MyProject_TrafficLight
+# Loading altera_ver.dffeas
+# Loading work.MyProject_TrafficLight_vlg_sample_tst
+# Loading work.MyProject_TrafficLight_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(853)
+#    Time: 1 us  Iteration: 0  Instance: /MyProject_TrafficLight_vlg_vec_tst/tb_out
+# End time: 12:11:50 on Aug 08,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

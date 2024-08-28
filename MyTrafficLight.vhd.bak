@@ -1,0 +1,139 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+entity traffic is
+	port (clk: in std_logic;
+			clr: in std_logic;
+			nsr, nsg, nsy, ewr, ewg, ewy: out std_logic;
+			statecounter : out std_LOGIC_VECTOR (3 downto 0);
+			clockcounter : out std_LOGIC_VECTOR (3 downto 0)
+			
+			);
+end traffic;
+
+architecture bhv of traffic is
+type state_type is (s0, s1, s2, s3);
+signal state: state_type; --differentiaties between different states
+signal count: std_logic_vector(3 downto 0); --counts from 0-13s
+signal seconds: STD_LOGIC_VECTOR (3 downto 0); --determines when the sttaecounter should change value
+constant sec13: std_logic_vector(3 downto 0) := "1101"; --maximum value at which the timer will count up to
+constant sec1: std_logic_vector(3 downto 0) := "0000"; --the amount of time for states s1 and s3
+begin
+process(clk, clr, seconds)
+begin
+	if clr = '0' then
+							state <= s0;
+							count <= "0000";
+							seconds <= "0000";
+							
+	elsif (rising_edge(clk)) then
+
+case state is 
+		when s0 =>
+				if (count < sec13) then
+					state <= s0;
+					count <= count + 1;
+					seconds <= seconds + 1;
+					
+				else
+					state <= s1;
+					count <= "0000";
+					seconds <= "0000";
+					
+				end if;
+				
+		when s1 =>
+				if (count < sec1) then
+					state <= s1;
+					count <= count + 1;
+					
+				else
+					state <= s2;
+					count <= "0000";
+					seconds <= "0000";
+					
+					end if;
+				
+		when s2 =>
+				if (count < sec13) then
+					state <= s2;
+					count <= count + 1;
+					seconds <= seconds + 1;
+				else
+					state <= s3;
+					count <= "0000";
+					seconds <= "0000";
+					
+				end if;
+				
+		when s3 =>
+				if (count < sec1) then
+					state <= s3;
+					count <= count + 1;
+				else
+					state <= s0;
+					count <= "0000";
+					seconds <= "0000";
+					
+				end if;
+				
+		when others =>
+					state <= s0;
+					
+	end case;
+end if;
+clockcounter <= seconds;
+end process;
+
+C2: process(state)
+begin
+case state is
+		when s0 => 
+			statecounter <= "0000";
+			nsr <= '1';
+			nsy <= '0';
+			nsg <= '0';
+			ewr <= '0';
+			ewy <= '0';
+			ewg <= '1';
+			
+		when s1 => 
+			statecounter <= "0001";
+			nsr <= '1';
+			nsy <= '0';
+			nsg <= '0';
+			ewr <= '0';
+			ewy <= '1';
+			ewg <= '0';
+			
+		when s2 => 
+			statecounter <= "0010";
+			nsr <= '0';
+			nsy <= '0';
+			nsg <= '1';
+			ewr <= '1';
+			ewy <= '0';
+			ewg <= '0';
+			
+		when s3 => 
+			statecounter <= "0011"; 
+			nsr <= '0';
+			nsy <= '1';
+			nsg <= '0';
+			ewr <= '1';
+			ewy <= '0';
+			ewg <= '0';
+			
+		when others => 
+			statecounter <= "0000";
+			nsr <= '1';
+			nsy <= '0';
+			nsg <= '0';
+			ewr <= '0';
+			ewy <= '0';
+			ewg <= '1';
+			
+	end case;
+end process;
+
+end bhv;
