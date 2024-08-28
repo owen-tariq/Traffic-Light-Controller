@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -3.920
+TNS   : -74.788
+
+Type  : Slow 1100mV 85C Model Setup 'Project_FreqDiv:inst|temp'
+Slack : -1.740
+TNS   : -27.730
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Project_FreqDiv:inst|temp'
+Slack : 0.608
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -20.126
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Project_FreqDiv:inst|temp'
+Slack : -0.538
+TNS   : -15.099
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -4.122
+TNS   : -75.058
+
+Type  : Slow 1100mV 0C Model Setup 'Project_FreqDiv:inst|temp'
+Slack : -1.781
+TNS   : -28.389
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Project_FreqDiv:inst|temp'
+Slack : 0.557
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -20.646
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Project_FreqDiv:inst|temp'
+Slack : -0.538
+TNS   : -14.811
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -1.863
+TNS   : -25.958
+
+Type  : Fast 1100mV 85C Model Setup 'Project_FreqDiv:inst|temp'
+Slack : -0.542
+TNS   : -8.497
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Project_FreqDiv:inst|temp'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.357
+TNS   : -2.694
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Project_FreqDiv:inst|temp'
+Slack : 0.021
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -1.720
+TNS   : -22.548
+
+Type  : Fast 1100mV 0C Model Setup 'Project_FreqDiv:inst|temp'
+Slack : -0.468
+TNS   : -7.085
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -0.003
+TNS   : -0.003
+
+Type  : Fast 1100mV 0C Model Hold 'Project_FreqDiv:inst|temp'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.340
+TNS   : -2.711
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Project_FreqDiv:inst|temp'
+Slack : 0.039
+TNS   : 0.000
+
+------------------------------------------------------------
